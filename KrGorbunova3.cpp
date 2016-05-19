@@ -9,7 +9,6 @@ void CheckText(char*, char*);
 
 int main()
 {
-	setlocale(0, "RUS");
 	const int N = 30;
 	char fileNameText[N];
 
@@ -61,10 +60,12 @@ void CheckText(char* fileNameText, char* fileNameWords) {
 	}
 	char String1[N] = "";
 	char String2[N] = "";
-	while (!streamIn2.eof()) {
+	while (!streamIn2.eof()) 
+	{
 		int count = 0;
 		streamIn2 >> String2;
-		while (!streamIn1.eof()) {
+		while (!streamIn1.eof()) 
+		{
 			streamIn1 >> String1;
 			if (strcmp(String1, String2) == 0)
 				count++;
